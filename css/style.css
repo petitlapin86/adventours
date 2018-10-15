@@ -32,4 +32,9 @@ body { /*always put font family in body so that it is inherited throughout*/
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+
+  /*This is creating the funky heading shape, think of 4 corners
+  left side being 0 right side being 100%,
+  for each corner specificy x and y coordinates */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
