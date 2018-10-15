@@ -32,9 +32,47 @@ body { /*always put font family in body so that it is inherited throughout*/
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+  position: relative;
 
   /*This is creating the funky heading shape, think of 4 corners
   left side being 0 right side being 100%,
   for each corner specificy x and y coordinates */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+/*LOGO*/
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box { /*This is centering the heading */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
 }
