@@ -103,6 +103,19 @@ body { /*always put font family in body so that it is inherited throughout*/
 }
 
 /*This is Animating the sub heading */
+@keyframes moveInBottom {
+ 0% {
+   opacity: 0;
+   transform: translateY(30px); /*positive value is going down */
+ }
+
+ 100% {
+   opacity: 1;
+   transform: translate(0); /*end result is zero because it looks as styled. */
+ }
+}
+
+/*This is Animating the sub heading */
 @keyframes moveInRight {
  0% {
    opacity: 0;
@@ -115,6 +128,7 @@ body { /*always put font family in body so that it is inherited throughout*/
  }
 }
 
+/*BUTTON*/
 .btn:link,
 .btn:visited { /*link is a pseudo class - to style elements in a special state. */
   text-transform: uppercase;
@@ -123,6 +137,7 @@ body { /*always put font family in body so that it is inherited throughout*/
   display: inline-block;
   border-radius: 100px; /*this rounds the corners of the button */
   transition: all .2s;
+  position: relative;
 }
 
 .btn:hover {
@@ -138,4 +153,32 @@ body { /*always put font family in body so that it is inherited throughout*/
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+/*BUTTON AFTER is the larger animation that happens behind button  */
+.btn::after { /*this is creating a duplicate button thats hidden behind the button */
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /*defines the position to be behind the origonal button */
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4), scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
 }
