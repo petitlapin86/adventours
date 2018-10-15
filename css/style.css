@@ -56,11 +56,13 @@ body { /*always put font family in body so that it is inherited throughout*/
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%); /*This is off setting the center to be the center of the content */
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -84,6 +86,7 @@ body { /*always put font family in body so that it is inherited throughout*/
    /*animation-delay: 3s; length of time before it starts*/
   /*animation-count: 3; this is basically like a repeat*/
   /*animation-timing-function: ease-in; various options for this*/
+  /*backface-visibility: hidden; this helps with shakiness animation issues*/
 }
 
  /*This is Animating the heading */
@@ -110,4 +113,29 @@ body { /*always put font family in body so that it is inherited throughout*/
    opacity: 1;
    transform: translate(0); /*end result is zero because it looks as styled. */
  }
+}
+
+.btn:link,
+.btn:visited { /*link is a pseudo class - to style elements in a special state. */
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px; /*this rounds the corners of the button */
+  transition: all .2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px); /*moves the button up */
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
