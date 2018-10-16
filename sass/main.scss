@@ -1,6 +1,16 @@
 
-/*COLOR VARIABLES:*/
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
+@import "base/base";
+@import "base/animations";
+@import "base/utilities";
+@import "base/typography";
+
+@import "pages/home";
+
+/*These are variables*/
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
