@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/petitlapin86/adventours/issues"
   },
-  "homepage": "https://github.com/petitlapin86/adventours#readme"
+  "homepage": "https://github.com/petitlapin86/adventours#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.4"
+  }
 }
