@@ -40,3 +40,23 @@ body { /*always put font family in body so that it is inherited throughout*/
     /*backface-visibility: hidden; this helps with shakiness animation issues*/
   }
 }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  /*below i am creating a gradient color font*/
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s;
+
+  /*below i am creating a skew animation on the secondary heading*/
+  &:hover {
+    transform: skewY(2deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  }
+
+}

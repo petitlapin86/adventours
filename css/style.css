@@ -1,4 +1,6 @@
 /*These are color variables*/
+/*These are GRID variables*/
+/*gutter is space in between columns*/
 /*This is a universal selector*/
 * {
   margin: 0;
@@ -8,6 +10,7 @@
   /*this keeps paddings and margins within the box size not beyond*/ }
 
 html {
+  /*This is defining what 1 rem is*/
   font-size: 62.5%; }
 
 body {
@@ -46,6 +49,11 @@ body {
     transform: translate(0);
     /*end result is zero because it looks as styled. */ } }
 
+/*Utility classes have very simple goals*/
+/*a great tool for reusable code*/
+.u-center-text {
+  text-align: center; }
+
 /*BODY FONT*/
 body {
   /*always put font family in body so that it is inherited throughout*/
@@ -80,6 +88,22 @@ body {
     /*animation-count: 3; this is basically like a repeat*/
     /*animation-timing-function: ease-in; various options for this*/
     /*backface-visibility: hidden; this helps with shakiness animation issues*/ }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  /*below i am creating a gradient color font*/
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s;
+  /*below i am creating a skew animation on the secondary heading*/ }
+  .heading-secondary:hover {
+    transform: skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 /*BUTTON*/
 .btn {
@@ -126,6 +150,29 @@ body {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards; }
 
+.row {
+  max-width: 114rem;
+  background-color: blue;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    /*not means except -so apply to everything but NOT last-child */
+    margin-bottom: 6rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^='col'] {
+    background-color: pink;
+    float: left; }
+    .row [class^='col']:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 2 6rem) / 4); }
+
 .header {
   height: 95vh;
   /*This is the percent of viewport height*/
@@ -155,3 +202,9 @@ body {
   transform: translate(-50%, -50%);
   /*This is off setting the center to be the center of the content */
   text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
+  /*this number is calculated by subtracting the remeaining polygon shape from the heading*/ }
