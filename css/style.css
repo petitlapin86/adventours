@@ -1,4 +1,4 @@
-/*COLORS:*/
+/*COLOR VARIABLES:*/
 /*This is a universal selector*/
 * {
   margin: 0;
@@ -32,11 +32,11 @@ body {
 /*LOGO*/
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px; }
+  top: 4rem;
+  left: 4rem; }
 
 .logo {
-  height: 35px; }
+  height: 3.5rem; }
 
 .text-box {
   /*This is centering the heading */
@@ -47,30 +47,29 @@ body {
   /*This is off setting the center to be the center of the content */
   text-align: center; }
 
+/*TEXT HEADING*/
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 60px; }
-
-.heading-primary-main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation-name: moveInLeft;
-  animation-duration: 3s; }
-
-.heading-primary-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-  animation-name: moveInRight;
-  animation-duration: 3s;
-  /*animation-delay: 3s; length of time before it starts*/
-  /*animation-count: 3; this is basically like a repeat*/
-  /*animation-timing-function: ease-in; various options for this*/
-  /*backface-visibility: hidden; this helps with shakiness animation issues*/ }
+  .heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 3s; }
+  .heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    /*animation-delay: 3s; length of time before it starts*/
+    /*animation-count: 3; this is basically like a repeat*/
+    /*animation-timing-function: ease-in; various options for this*/
+    /*backface-visibility: hidden; this helps with shakiness animation issues*/ }
 
 /*This is Animating the heading */
 @keyframes moveInLeft {
@@ -106,53 +105,46 @@ body {
     /*end result is zero because it looks as styled. */ } }
 
 /*BUTTON*/
-.btn:link,
-.btn:visited {
-  /*link is a pseudo class - to style elements in a special state. */
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 100px;
-  /*this rounds the corners of the button */
-  transition: all .2s;
-  position: relative; }
-
-.btn:hover {
-  transform: translateY(-3px);
-  /*moves the button up */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-
-.btn-white {
-  background-color: #fff;
-  color: #777; }
-
-/*BUTTON AFTER is the larger animation that happens behind button  */
-.btn::after {
-  /*this is creating a duplicate button thats hidden behind the button */
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  /*defines the position to be behind the origonal button */
-  transition: all .4s; }
-
-.btn-white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4), scaleY(1.6);
-  opacity: 0; }
-
-.btn-animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; }
+.btn {
+  /*BUTTON AFTER is the larger animation that happens behind button  */ }
+  .btn:link, .btn:visited {
+    /*link is a pseudo class - to style elements in a special state. */
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    /*this rounds the corners of the button */
+    transition: all .2s;
+    position: relative; }
+  .btn:hover {
+    transform: translateY(-3px);
+    /*moves the button up */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .btn-white {
+    background-color: #fff;
+    color: #777; }
+  .btn::after {
+    /*this is creating a duplicate button thats hidden behind the button */
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*defines the position to be behind the origonal button */
+    transition: all .4s; }
+  .btn-white::after {
+    background-color: #fff; }
+  .btn:hover::after {
+    transform: scaleX(1.4), scaleY(1.6);
+    opacity: 0; }
+  .btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; }
