@@ -1,0 +1,16 @@
+
+
+/*This is a universal selector*/
+* {
+  margin:0; /*by default a browser adds margins and padding so we are resetting to zero*/
+  padding: 0;
+  box-sizing: border-box; /*this keeps paddings and margins within the box size not beyond*/
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}

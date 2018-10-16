@@ -1,0 +1,42 @@
+
+/*BODY FONT*/
+body { /*always put font family in body so that it is inherited throughout*/
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 3rem; /*This is creating white border around entire webpage*/
+}
+
+/*TEXT HEADING*/
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+
+
+  &-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+  }
+
+  &-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+
+    animation-name: moveInRight;
+    animation-duration: 3s;
+     /*animation-delay: 3s; length of time before it starts*/
+    /*animation-count: 3; this is basically like a repeat*/
+    /*animation-timing-function: ease-in; various options for this*/
+    /*backface-visibility: hidden; this helps with shakiness animation issues*/
+  }
+}
