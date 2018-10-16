@@ -1,162 +1,139 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
+/*COLORS:*/
 /*This is a universal selector*/
 * {
-  margin:0; /*by default a browser adds margins and padding so we are resetting to zero*/
+  margin: 0;
+  /*by default a browser adds margins and padding so we are resetting to zero*/
   padding: 0;
-  box-sizing: border-box; /*this keeps paddings and margins within the box size not beyond*/
-}
+  box-sizing: border-box;
+  /*this keeps paddings and margins within the box size not beyond*/ }
 
-body { /*always put font family in body so that it is inherited throughout*/
+body {
+  /*always put font family in body so that it is inherited throughout*/
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
   color: #777;
-  padding: 30px; /*This is creating white border around entire webpage*/
-}
+  padding: 30px;
+  /*This is creating white border around entire webpage*/ }
 
 .header {
-  height: 95vh; /*This is the percent of viewport height*/
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(126, 213, 111, 0.8),
-    rgba(40, 180, 131, 0.8)),
-    url(../img/hero.jpg);
+  height: 95vh;
+  /*This is the percent of viewport height*/
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-
   /*This is creating the funky heading shape, think of 4 corners
   left side being 0 right side being 100%,
   for each corner specificy x and y coordinates */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
 /*LOGO*/
 .logo-box {
   position: absolute;
   top: 40px;
-  left: 40px;
-}
+  left: 40px; }
 
 .logo {
-  height: 35px;
-}
+  height: 35px; }
 
-.text-box { /*This is centering the heading */
+.text-box {
+  /*This is centering the heading */
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%); /*This is off setting the center to be the center of the content */
-  text-align: center;
-}
+  transform: translate(-50%, -50%);
+  /*This is off setting the center to be the center of the content */
+  text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
-}
+  margin-bottom: 60px; }
 
 .heading-primary-main {
   display: block;
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
-
   animation-name: moveInLeft;
-  animation-duration: 3s;
-}
+  animation-duration: 3s; }
 
 .heading-primary-sub {
   display: block;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
-
   animation-name: moveInRight;
   animation-duration: 3s;
-   /*animation-delay: 3s; length of time before it starts*/
+  /*animation-delay: 3s; length of time before it starts*/
   /*animation-count: 3; this is basically like a repeat*/
   /*animation-timing-function: ease-in; various options for this*/
-  /*backface-visibility: hidden; this helps with shakiness animation issues*/
-}
+  /*backface-visibility: hidden; this helps with shakiness animation issues*/ }
 
- /*This is Animating the heading */
+/*This is Animating the heading */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px); /*a negative value goes to the left */
-  }
-
+    transform: translateX(-100px);
+    /*a negative value goes to the left */ }
   100% {
     opacity: 1;
-    transform: translate(0); /*end result is zero because it looks as styled. */
-  }
-}
+    transform: translate(0);
+    /*end result is zero because it looks as styled. */ } }
 
 /*This is Animating the sub heading */
 @keyframes moveInBottom {
- 0% {
-   opacity: 0;
-   transform: translateY(30px); /*positive value is going down */
- }
-
- 100% {
-   opacity: 1;
-   transform: translate(0); /*end result is zero because it looks as styled. */
- }
-}
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    /*positive value is going down */ }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /*end result is zero because it looks as styled. */ } }
 
 /*This is Animating the sub heading */
 @keyframes moveInRight {
- 0% {
-   opacity: 0;
-   transform: translateX(100px); /*positive value goes to the right */
- }
-
- 100% {
-   opacity: 1;
-   transform: translate(0); /*end result is zero because it looks as styled. */
- }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+    /*positive value goes to the right */ }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /*end result is zero because it looks as styled. */ } }
 
 /*BUTTON*/
 .btn:link,
-.btn:visited { /*link is a pseudo class - to style elements in a special state. */
+.btn:visited {
+  /*link is a pseudo class - to style elements in a special state. */
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
   display: inline-block;
-  border-radius: 100px; /*this rounds the corners of the button */
+  border-radius: 100px;
+  /*this rounds the corners of the button */
   transition: all .2s;
-  position: relative;
-}
+  position: relative; }
 
 .btn:hover {
-  transform: translateY(-3px); /*moves the button up */
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
-}
+  transform: translateY(-3px);
+  /*moves the button up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
-}
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 .btn-white {
   background-color: #fff;
-  color: #777;
-}
+  color: #777; }
 
 /*BUTTON AFTER is the larger animation that happens behind button  */
-.btn::after { /*this is creating a duplicate button thats hidden behind the button */
+.btn::after {
+  /*this is creating a duplicate button thats hidden behind the button */
   content: "";
   display: inline-block;
   height: 100%;
@@ -165,20 +142,17 @@ body { /*always put font family in body so that it is inherited throughout*/
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /*defines the position to be behind the origonal button */
-  transition: all .4s;
-}
+  z-index: -1;
+  /*defines the position to be behind the origonal button */
+  transition: all .4s; }
 
 .btn-white::after {
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 .btn:hover::after {
   transform: scaleX(1.4), scaleY(1.6);
-  opacity: 0;
-}
+  opacity: 0; }
 
 .btn-animated {
   animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
