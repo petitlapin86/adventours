@@ -1,0 +1,19 @@
+{
+  "name": "adventours",
+  "version": "1.0.0",
+  "description": "A project to flex my sass skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petitlapin86/adventours.git"
+  },
+  "author": "Paige Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petitlapin86/adventours/issues"
+  },
+  "homepage": "https://github.com/petitlapin86/adventours#readme"
+}
