@@ -1,9 +1,9 @@
 .row {
   max-width: $grid-width;
-  margin: 0 auto;
+  margin: 0 auto; //center row
 
 
-      &:not(:last-child) { /*not means except -so apply to everything but NOT last-child */
+      &:not(:last-child) { // all rows except the last one
       margin-bottom: $gutter-horizontal;
       }
 
@@ -25,7 +25,22 @@
           width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
           }
 
-          .col-1-of-4 {
-            width: calc((100% - 2 #{$gutter-horizontal}) / 4);
+      .col-1-of-4 {
+             width: calc((100% - #{$gutter-horizontal}*3) / 4);
+           }
+
+
+      .col-2-of-3 {
+        width: calc(((100% - #{$gutter-horizontal}*2) / 3)*2 + #{$gutter-horizontal});
           }
+
+      .col-2-of-4 {
+        width: calc(((100% - #{$gutter-horizontal}*3) / 4)*2 + #{$gutter-horizontal});
+        }
+
+      .col-3-of-4 {
+       width: calc(((100% - #{$gutter-horizontal}*3) / 4)*3 + #{$gutter-horizontal}*2);
+         }
+
+
       }

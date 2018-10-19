@@ -3,3 +3,21 @@
   padding: 25rem 0;
   margin-top: -20vh; /*this number is calculated by subtracting the remeaining polygon shape from the heading*/
 }
+
+//this is the second green skew image on main page
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+    url(../img/nat-4.jpg);
+    background-size: cover;
+    transform: skewY(-7deg); //this is creating the angle shape
+    margin-top: -10rem; //this is moving the angle up 
+
+    & > * { //selecting all the direct children which is the row
+      transform: skewY(7deg); //this is offsetting the angle shape and straightetning the features
+    }
+
+}
