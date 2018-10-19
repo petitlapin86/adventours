@@ -54,6 +54,15 @@ body {
 .u-center-text {
   text-align: center; }
 
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
 /*BODY FONT*/
 body {
   /*always put font family in body so that it is inherited throughout*/
@@ -89,6 +98,7 @@ body {
     /*animation-timing-function: ease-in; various options for this*/
     /*backface-visibility: hidden; this helps with shakiness animation issues*/ }
 
+/*This is the secondary heading (exciting tours for adventurous people)*/
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
@@ -104,6 +114,17 @@ body {
   .heading-secondary:hover {
     transform: skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+/*This is the tertiary heading (fall in love with nature)*/
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
 
 /*BUTTON*/
 .btn {
@@ -152,7 +173,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: blue;
   margin: 0 auto; }
   .row:not(:last-child) {
     /*not means except -so apply to everything but NOT last-child */
@@ -161,10 +181,9 @@ body {
     content: "";
     display: table;
     clear: both; }
-  .row [class^='col'] {
-    background-color: pink;
+  .row [class^='col-'] {
     float: left; }
-    .row [class^='col']:not(:last-child) {
+    .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
