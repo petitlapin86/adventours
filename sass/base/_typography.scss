@@ -64,14 +64,14 @@ body { /*always put font family in body so that it is inherited throughout*/
 
 /*This is the tertiary heading (fall in love with nature)*/
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
 
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: $default-font-size;
     &:not(:last-child) {
       margin-bottom: 3rem;
     }
