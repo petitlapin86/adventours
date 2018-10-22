@@ -1,32 +1,37 @@
 /*BUTTON*/
 .btn {
 
-  &:link,
-  &:visited { /*link is a pseudo class - to style elements in a special state. */
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px; /*this rounds the corners of the button */
-    transition: all .2s;
-    position: relative;
-    font-size: $default-font-size;
-  }
+    &:link,
+    &:visited { /*link is a pseudo class - to style elements in a special state. */
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 40px;
+      display: inline-block;
+      border-radius: 100px; /*this rounds the corners of the button */
+      transition: all .2s;
+      position: relative;
+      font-size: $default-font-size;
+      }
 
-  &:hover {
-    transform: translateY(-3px); /*moves the button up */
-    box-shadow: 0 10px 20px rgba($color-black,.2);
-  }
+      &:hover {
+      transform: translateY(-3px); /*moves the button up */
+      box-shadow: 0 10px 20px rgba($color-black,.2);
+      }
 
-  &:active {
+    &:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba($color-black,.2);
-  }
+    }
 
-  &-white {
+    &-white {
     background-color: $color-white;
     color: $color-gray-dark;
-  }
+    }
+
+    &-green {
+    background-color: $color-primary;
+    color: $color-white;
+    }
 
   /*BUTTON AFTER is the larger animation that happens behind button  */
   &::after { /*this is creating a duplicate button thats hidden behind the button */

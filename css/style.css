@@ -61,6 +61,9 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 /*BODY FONT*/
 body {
   /*always put font family in body so that it is inherited throughout*/
@@ -148,6 +151,9 @@ body {
   .btn-white {
     background-color: #fff;
     color: #777; }
+  .btn-green {
+    background-color: #55c57a;
+    color: #fff; }
   .btn::after {
     /*this is creating a duplicate button thats hidden behind the button */
     content: "";
