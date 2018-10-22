@@ -89,9 +89,9 @@
         z-index: 1; // bottom was getting chopped off from clip path, this fix was in Q&A
     }
 
-    &__heading-span {
+    &__heading-span { //this is the tour heading background
         padding: 1rem 1.5rem;
-        -webkit-box-decoration-break: clone;
+        -webkit-box-decoration-break: clone; //this treats each line like its own element
         box-decoration-break: clone; // heading text is treated as one sentence which messes up the padding, this is the fix
 
         &--1 {
