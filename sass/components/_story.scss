@@ -1,3 +1,4 @@
+// this is the layout for the reviews section
 .story {
   width:75%;
   margin: 0 auto;
@@ -5,4 +6,23 @@
   background-color: $color-white;
   border-radius: 3px;
   padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg); //this is making the angled shape of review container
+
+// this is making the round thumbnail on the left
+    &__shape {
+      width: 15rem;
+      height: 15rem;
+      float: left;
+      -webkit-shape-outside: circle(50% at 50% 50%); //this is shaping the text to go around circle
+      shape-outside: circle(50% at 50% 50%);
+      -webkit-clip-path: circle(50% at 50% 50%); //this is shaping the image to be a centered circle
+      clip-path: circle(50% at 50% 50%);
+      transform: translateX(-3rem);
+    }
+
+    &__img {
+        height: 100%;
+    }
 }
