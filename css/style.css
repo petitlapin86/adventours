@@ -50,7 +50,7 @@ body {
 /*Utility classes have very simple goals*/
 /*a great tool for reusable code*/
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
@@ -133,7 +133,7 @@ body {
 /*BUTTON*/
 .btn {
   /*BUTTON AFTER is the larger animation that happens behind button  */ }
-  .btn:link, .btn:visited {
+  .btn, .btn:link, .btn:visited {
     /*link is a pseudo class - to style elements in a special state. */
     text-transform: uppercase;
     text-decoration: none;
@@ -143,12 +143,15 @@ body {
     /*this rounds the corners of the button */
     transition: all .2s;
     position: relative;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer; }
   .btn:hover {
     transform: translateY(-3px);
     /*moves the button up */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-  .btn:active {
+  .btn:active, .btn:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
   .btn-white {
