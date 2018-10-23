@@ -40,10 +40,24 @@
   background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 }
 
+
+//creates Angled card with gradient picture
+//this is very complex!
 .book {
-  background-image: url(../img/nat-10.jpg);
+  background-image: linear-gradient(105deg,
+  rgba($color-white, .9) 0%,
+  rgba($color-white, .9) 50%,
+  transparent 50%), //this is the right side
+  url(../img/nat-10.jpg);
   background-size: cover; //defines size can also use percentages
   height: 50rem; //height of container
   border-radius: 3px; //rounds corners
   box-shadow: 0 1.5rem 4rem rgba($color-black, .25); //creates shadow
+
+
+//creating left side form
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
 }
