@@ -1,0 +1,19 @@
+// background video component
+// for some reason upon inspection this seems to only be reading some of the styles listed below
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; //this is setting to display behind other elements
+  opacity: .15; //this is opacity of whole video - great for backgrounds
+  overflow: hidden;
+
+  &__content { // this is fitting video content
+    height: 100%;
+    width: 100%;
+    object-fit: cover; // this is fitting video to parent element
+  }
+}
