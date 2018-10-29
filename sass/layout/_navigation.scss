@@ -15,6 +15,7 @@
         z-index: 2000; //position always on top of green background nav circle
         box-shadow: 0 1rem 3rem rgba($color-black, 0.3); //add shadow to circle
         text-align: center; //centering hamburger icon
+        cursor: pointer;
     }
 
     &__background { //this is the circle green background of nav
@@ -114,13 +115,33 @@
           content: "";
           position: absolute;
           left: 0;
+          transition: all .2s;
         }
 
-        &::before { top: -1rem;}
-        &::after { top: 1rem;}
-
+        &::before { top: -.8rem;} //position of hamburger icon
+        &::after { top: .8rem;} //position of hamburger icon
     } //closes icon class
 
+        &__button:hover &__icon::before { //on hover there is an animation to hamburger icon to make it look like its expanding
+          top: -1rem; //we do this by shifting the positioning
+        }
 
+        &__button:hover &__icon::after {
+          top: 1rem;
+        }
+
+        &__checkbox:checked + &__button &__icon { //when checkbox is selected we select its brother and its child
+          background-color: transparent; //make middle line element invisible
+        }
+
+        &__checkbox:checked + &__button &__icon::before { //when checkbox is selected we select its brother and its child
+          top: 0;
+          transform: rotate(135deg); //rotate line element
+        }
+
+        &__checkbox:checked + &__button &__icon::after { //when checkbox is selected we select its brother and its child
+          top: 0;
+          transform: rotate(-135deg); //rotate line element
+        }
 
 } //closes nav class
