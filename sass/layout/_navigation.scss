@@ -51,12 +51,30 @@
     }
 
     &__link { //this is styling the font on the nav links/list
+                &:link,
+                &:visited {
+                display: inline-block;
+                font-size: 3rem;
+                font-weight: 300;
+                padding: 1rem 2rem; //spacing around text
+                color: $color-white;
+                text-decoration: none;
+                text-transform: uppercase;
+                background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%); //this is creating the white wrap around animation
+                background-size: 220%; //this is helping to move the white animation
+                transition: all .4s; //this is length of time of animation
 
-      font-size: 3rem;
-      font-weight: 300;
-      color: $color-white
-      text-decoration: none;
-      text-transform: uppercase;
+                span {
+                  margin-right: 1.5rem;
+                  display: inline-block;
+                }
+            }
 
-    }
-}
+            &:hover,
+            &:active {
+              background-position: 100%;
+              color: $color-primary; //on hover text changes to green
+              transform: translateX(1rem);
+            }
+    } //closes __link
+} //closes nav class
