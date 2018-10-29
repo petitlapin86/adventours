@@ -8,6 +8,33 @@
     left: 0;
     background-color: rgba($color-black, .8);
     z-index: 3000;
+    opacity: 0; //hiding popup till clicked
+    visibility: hidden; //hiding popup till clicked
+    transition: all .3s;
+
+    &:target { //make popup visible when target clicked
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__close { //styling x to close popup
+      &:link,
+      &:visited {
+        color: $color-gray-dark;
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        font-size: 3rem;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .2s;
+      }
+
+      :hover {
+        color: $color-primary;
+      }
+
+    }//close __close
 
         &__content { //this is the popup content styling
           @include absolutecenter;
