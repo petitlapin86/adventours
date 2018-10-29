@@ -13,6 +13,7 @@
         right: 6rem;  //choose right positioning
         border-radius: 50%; //create round shape
         z-index: 2000; //position always on top of green background nav circle
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.3); //add shadow to circle
     }
 
     &__background { //this is the circle background of nav
@@ -24,17 +25,21 @@
         right: 6.5rem; //choose right positioning
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000; //position always on top of other content
+        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1); //go to cubic-bezier website for all sorts of transitions to use
 
-        transform: scale(80);
+        //transform: scale(80);
     }
 
-    &__nav { //this is the full screen nav
+    &__nav { //this is the full screen opened nav
         height: 100vh; //spans entire viewport height
-        width: 100%; //spans entire viewport width
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1500; //higher position than background but less than button
+
+        opacity: 0; //hide the navigation and background
+        width: 0; //hide the navigation and background
+        transition: all .08s cubic-bezier(0.68, -0.55, 0.265, 1.55); //were animating the element so it appears like its radiating out of nav button
     }
 
     &__list { //this is all centering the list/links inside the nav
@@ -44,6 +49,7 @@
         transform: translate(-50%, -50%);
         list-style: none; //get rid of default dots
         text-align: center;
+        width: 100%;
     }
 
     &__item {
@@ -70,11 +76,22 @@
                 }
             }
 
-            &:hover,
+            &:hover, //this is styling the link/list change on hover when background goes to white
             &:active {
               background-position: 100%;
               color: $color-primary; //on hover text changes to green
               transform: translateX(1rem);
             }
     } //closes __link
+
+    &__checkbox:checked ~  &__background { //adjacent sibling selector
+          transform: scale(80);
+        } //closes __checkbox and __background
+
+    &__checkbox:checked ~  &__nav { //adjacent sibling selector
+          opacity: 1; //show the navigation and background
+          width: 100%; //show the navigation and background
+
+        } //closes __checkbox and __background
+
 } //closes nav class
