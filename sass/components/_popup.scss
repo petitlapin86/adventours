@@ -12,30 +12,6 @@
     visibility: hidden; //hiding popup till clicked
     transition: all .3s;
 
-    &:target { //make popup visible when target clicked
-      opacity: 1;
-      visibility: visible;
-    }
-
-    &__close { //styling x to close popup
-      &:link,
-      &:visited {
-        color: $color-gray-dark;
-        position: absolute;
-        top: 2.5rem;
-        right: 2.5rem;
-        font-size: 3rem;
-        text-decoration: none;
-        display: inline-block;
-        transition: all .2s;
-      }
-
-      :hover {
-        color: $color-primary;
-      }
-
-    }//close __close
-
         &__content { //this is the popup content styling
           @include absolutecenter;
           width: 75%;
@@ -44,6 +20,9 @@
           border-radius: 3px;
           display: table;
           overflow: hidden;
+          opacity: 0;
+          transform: translate(-50% -50%) scale(.25); //scaled down animation this makes the pop up size up on screen
+          transition: all .5s .2s; //.2s is the delay
         }
 
         &__left {
@@ -81,4 +60,35 @@
             -webkit-hyphens: auto;
             hyphens: auto;
         }
-}
+
+          //popup open section-features
+
+          &:target { //make popup visible when target clicked
+            opacity: 1;
+            visibility: visible;
+          }
+
+           &:target &__content { //style popup content when target clicked
+            opacity: 1;
+           transform: translate(-50%, -50%) scale(1); //scaled up animation
+          }
+
+          &__close { //styling x to close popup
+            &:link,
+            &:visited {
+              color: $color-gray-dark;
+              position: absolute;
+              top: 2.5rem;
+              right: 2.5rem;
+              font-size: 3rem;
+              text-decoration: none;
+              display: inline-block;
+              transition: all .2s;
+              line-height: 1;
+            }
+            &:hover { //x to close popup turns green on hover
+              color: $color-primary;
+            }
+        }//close __close
+
+} //close popup
