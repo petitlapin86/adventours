@@ -1,0 +1,62 @@
+.navigation {
+
+    &__checkbox {
+        display: none; //hide checkbox for nav bar hack
+    }
+
+    &__button {
+        background-color: $color-white; //creating white nav button
+        height: 7rem; //making larger than green circle behind
+        width: 7rem; //making larger than green circle behind
+        position: fixed; //wont change position as page scrolls
+        top: 6rem; //choose top positioning
+        right: 6rem;  //choose right positioning
+        border-radius: 50%; //create round shape
+        z-index: 2000; //position always on top of green background nav circle
+    }
+
+    &__background { //this is the circle background of nav
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%; //create round shape
+        position: fixed; //wont change position as page scrolls
+        top: 6.5rem; //choose top positioning
+        right: 6.5rem; //choose right positioning
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        z-index: 1000; //position always on top of other content
+
+        transform: scale(80);
+    }
+
+    &__nav { //this is the full screen nav
+        height: 100vh; //spans entire viewport height
+        width: 100%; //spans entire viewport width
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500; //higher position than background but less than button
+    }
+
+    &__list { //this is all centering the list/links inside the nav
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none; //get rid of default dots
+        text-align: center;
+    }
+
+    &__item {
+        margin: 1rem; //space between elements (the links/list)
+    }
+
+    &__link { //this is styling the font on the nav links/list
+
+      font-size: 3rem;
+      font-weight: 300;
+      color: $color-white
+      text-decoration: none;
+      text-transform: uppercase;
+
+    }
+}
