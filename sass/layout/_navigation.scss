@@ -4,7 +4,7 @@
         display: none; //hide checkbox for nav bar hack
     }
 
-    &__button {
+    &__button { //this is the circle white background of nav
         background-color: $color-white; //creating white nav button
         height: 7rem; //making larger than green circle behind
         width: 7rem; //making larger than green circle behind
@@ -14,9 +14,10 @@
         border-radius: 50%; //create round shape
         z-index: 2000; //position always on top of green background nav circle
         box-shadow: 0 1rem 3rem rgba($color-black, 0.3); //add shadow to circle
+        text-align: center; //centering hamburger icon
     }
 
-    &__background { //this is the circle background of nav
+    &__background { //this is the circle green background of nav
         height: 6rem;
         width: 6rem;
         border-radius: 50%; //create round shape
@@ -84,14 +85,42 @@
             }
     } //closes __link
 
+    //FUNCTIONALITY
     &__checkbox:checked ~  &__background { //adjacent sibling selector
           transform: scale(80);
-        } //closes __checkbox and __background
+        }
 
     &__checkbox:checked ~  &__nav { //adjacent sibling selector
           opacity: 1; //show the navigation and background
           width: 100%; //show the navigation and background
+        }
 
-        } //closes __checkbox and __background
+    //HAMBURGER ICON
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem; //centering hamburger inside white button circle
+
+        &,
+        &::before,
+        &::after {
+          width: 3rem; //hamburger line width
+          height: 2px; //hamburger line height
+          background-color: $color-gray-darkest; //hamburger line color
+          display: inline-block;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+        }
+
+        &::before { top: -1rem;}
+        &::after { top: 1rem;}
+
+    } //closes icon class
+
+
 
 } //closes nav class
