@@ -2,6 +2,14 @@
   &::after {
     content: "";
     display: table;
-    clear: both; 
+    clear: both;
   }
+}
+
+//this is to center objects within parent elements
+@mixin absolutecenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50, -50);
 }

@@ -1,0 +1,36 @@
+//this is the popup that happens when you click "book now"
+
+.popup { //this is the popup background styling
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-black, .8);
+    z-index: 3000;
+
+        &__content { //this is the popup content styling
+          @include absolutecenter;
+          width: 75%;
+          height: 50rem;
+          background-color: $color-white;
+          box-shadow: 0 2rem 4rem rgba($color-black, .2);
+          border-radius: 3px;
+        }
+
+        &__left {
+
+        }
+
+        &__right {
+
+        }
+
+        &__img {
+
+        }
+
+        &__text {
+
+        }
+}
