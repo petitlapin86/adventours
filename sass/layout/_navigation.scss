@@ -16,6 +16,16 @@
         box-shadow: 0 1rem 3rem rgba($color-black, 0.3); //add shadow to circle
         text-align: center; //centering hamburger icon
         cursor: pointer;
+
+
+        @include respond(tab-portrait) { //change positioning of nav button on smaller screens
+          top: 4rem;
+          right: 4rem;
+        }
+        @include respond(phone) { //change positioning of nav button on smaller screens
+          top: 3rem;
+          right: 3rem;
+        }
     }
 
     &__background { //this is the circle green background of nav
@@ -29,7 +39,14 @@
         z-index: 1000; //position always on top of other content
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1); //go to cubic-bezier website for all sorts of transitions to use
 
-        //transform: scale(80);
+        @include respond(tab-portrait) { //change positioning of nav button on smaller screens
+          top: 4.5rem;
+          right: 4.5rem;
+        }
+        @include respond(phone) { //change positioning of nav button on smaller screens
+          top: 3.5rem;
+          right: 3.5rem;
+        }
     }
 
     &__nav { //this is the full screen opened nav
