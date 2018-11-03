@@ -4,8 +4,12 @@
 
 
       &:not(:last-child) { // all rows except the last one
-      margin-bottom: $gutter-horizontal;
+      margin-bottom: $gutter-vertical;
+
+      @include respond(tab-portrait) { //this is changing grid column size on smaller screen
+      margin-bottom: $gutter-vertical-small;
       }
+    }
 
       @include clearfix;
 
@@ -14,6 +18,15 @@
 
         &:not(:last-child) {
           margin-right: $gutter-horizontal;
+
+          @include respond(tab-portrait) { //this is changing grid column size on smaller screen
+            margin-right: 0;
+            margin-bottom: $gutter-vertical-small;
+          }
+        }
+
+        @include respond(tab-portrait) { //this is changing grid column size on smaller screen
+          width: 100% !important;
         }
       }
 

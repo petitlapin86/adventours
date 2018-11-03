@@ -64,11 +64,11 @@ body { /*always put font family in body so that it is inherited throughout*/
   transition: all .2s;
 
   @include respond(tab-portrait) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   @include respond(phone) {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   /*below i am creating a skew animation on the secondary heading*/
