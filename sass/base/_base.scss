@@ -11,12 +11,21 @@ html {
   /*This is defining what 1 rem is*/
   font-size: 62.5%; // 1rem = 10px, 10/16 = 62.5 %
 
-  @include respond-phone {
-    font-size: 50%;
-  }
 
   @include respond(phone) {
     font-size: 50%;
+  }
+
+  @include respond(tab-portrait) {
+    font-size: 60%;
+  }
+
+  @include respond(tab-landscape) {
+    font-size: 70%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 80%;
   }
 }
 
