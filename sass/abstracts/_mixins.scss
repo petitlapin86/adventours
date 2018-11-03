@@ -24,24 +24,20 @@
 1800px +: Big desktop
 */
 
-@mixin respond-phone {
-  @media (max-width: 600px) {@content};
-}
-
 /*$breakpoint argument choices:
 -phone -tab-portrait -tab-landscape -big-desktop*/
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 600px) {@content};
+    @media (max-width: 37.5em) {@content}; //same as 600px
   }
   @if $breakpoint == tab-portrait {
-    @media (max-width: 900px) {@content};
+    @media (max-width: 56.25em) {@content}; //same as 900px
   }
   @if $breakpoint == tab-landscape {
-    @media (max-width: 1200px) {@content};
+    @media (max-width: 75em) {@content}; //same as 1200px
   }
   @if $breakpoint == big-desktop {
-    @media (min-width: 1800px) {@content};
+    @media (min-width: 112.5em) {@content}; //same as 1800px
   }
 }
