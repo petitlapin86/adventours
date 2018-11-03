@@ -5,6 +5,8 @@
 1200 - 1800px: normal styles apply because this is a desktop first approach
 1800px +: Big desktop
 */
+/*$breakpoint argument choices:
+-phone -tab-portrait -tab-landscape -big-desktop*/
 /*gutter is space in between columns*/
 /*This is a universal selector*/
 * {
@@ -17,6 +19,9 @@
 html {
   /*This is defining what 1 rem is*/
   font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
   @media (max-width: 600px) {
     html {
       font-size: 50%; } }
