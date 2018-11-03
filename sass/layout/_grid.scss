@@ -13,6 +13,7 @@
 
       @include respond(tab-portrait) { //this is changing grid column size on smaller screen
       max-width: 50rem;
+      padding: 0 3rem;
       }
 
       @include clearfix;
