@@ -1,21 +1,23 @@
 
 
 /*This is a universal selector*/
-* {
+*,
+*::after,
+*::before {
   margin: 0; /*by default a browser adds margins and padding so we are resetting to zero*/
   padding: 0;
-  box-sizing: border-box; /*this keeps paddings and margins within the box size not beyond*/
+  box-sizing: inherit; /*this keeps paddings and margins within the box size not beyond*/
 }
 
 html {
   /*This is defining what 1 rem is*/
   font-size: 62.5%; // 1rem = 10px, 10/16 = 62.5 %
 
-  @include respond(tab-landscape) { //width < 900?
+  @include respond(tab-landscape) { //width < 1200?
     font-size: 56.25%;
   }
 
-  @include respond(tab-portrait) { //width < 600?
+  @include respond(tab-portrait) { //width < 900?
     font-size: 50%;
   }
 
@@ -26,4 +28,14 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem; /*This is creating white border around entire webpage*/
+
+
+  @include respond(tab-portrait) { //width < 900?
+    padding: 0; //gets rid of white border on smaller screens
+  }
+
+
+
+
 }

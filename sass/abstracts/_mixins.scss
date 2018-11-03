@@ -22,10 +22,13 @@
 900 - 1200px: tablet landscape
 1200 - 1800px: normal styles apply because this is a desktop first approach
 1800px +: Big desktop
-*/
 
-/*$breakpoint argument choices:
--phone -tab-portrait -tab-landscape -big-desktop*/
+ORDER TO MAKE RESPONSIVE:
+base --> typography --> general layout --> grid --> page layout --> components 
+
+$breakpoint argument choices:
+-phone -tab-portrait -tab-landscape -big-desktop
+*/
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {

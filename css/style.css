@@ -4,16 +4,22 @@
 900 - 1200px: tablet landscape
 1200 - 1800px: normal styles apply because this is a desktop first approach
 1800px +: Big desktop
+
+ORDER TO MAKE RESPONSIVE:
+base --> typography --> general layout --> grid --> page layout --> components 
+
+$breakpoint argument choices:
+-phone -tab-portrait -tab-landscape -big-desktop
 */
-/*$breakpoint argument choices:
--phone -tab-portrait -tab-landscape -big-desktop*/
 /*gutter is space in between columns*/
 /*This is a universal selector*/
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   /*by default a browser adds margins and padding so we are resetting to zero*/
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
   /*this keeps paddings and margins within the box size not beyond*/ }
 
 html {
@@ -30,7 +36,12 @@ html {
       font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem;
+  /*This is creating white border around entire webpage*/ }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 /*This is Animating the heading */
 @keyframes moveInLeft {
@@ -92,9 +103,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  /*This is creating white border around entire webpage*/ }
+  color: #777; }
 
 /*TEXT HEADING*/
 .heading-primary {
@@ -107,7 +116,12 @@ body {
     font-weight: 400;
     letter-spacing: 35px;
     animation-name: moveInLeft;
-    animation-duration: 3s; }
+    animation-duration: 3s;
+    animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary-main {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
   .heading-primary-sub {
     display: block;
     font-size: 20px;
@@ -119,6 +133,9 @@ body {
     /*animation-count: 3; this is basically like a repeat*/
     /*animation-timing-function: ease-in; various options for this*/
     /*backface-visibility: hidden; this helps with shakiness animation issues*/ }
+    @media (max-width: 37.5em) {
+      .heading-primary-sub {
+        letter-spacing: .5rem; } }
 
 /*This is the secondary heading (exciting tours for adventurous people)*/
 .heading-secondary {
@@ -133,6 +150,12 @@ body {
   letter-spacing: 2px;
   transition: all .2s;
   /*below i am creating a skew animation on the secondary heading*/ }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
