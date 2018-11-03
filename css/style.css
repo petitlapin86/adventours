@@ -605,6 +605,9 @@ body {
     @media (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row::after {
     content: "";
     display: table;
@@ -644,6 +647,9 @@ body {
   left side being 0 right side being 100%,
   for each corner specificy x and y coordinates */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 85% 75vh, 0 100%); } }
 
 /*LOGO*/
 .logo-box {

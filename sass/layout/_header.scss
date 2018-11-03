@@ -14,6 +14,10 @@
   left side being 0 right side being 100%,
   for each corner specificy x and y coordinates */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 85% 75vh, 0 100%); //fixing angle for smallest screen
+  }
 }
 
 /*LOGO*/
