@@ -19,18 +19,15 @@
 html {
   /*This is defining what 1 rem is*/
   font-size: 62.5%; }
-  @media (max-width: 37.5em) {
-    html {
-      font-size: 50%; } }
-  @media (max-width: 56.25em) {
-    html {
-      font-size: 60%; } }
   @media (max-width: 75em) {
     html {
-      font-size: 70%; } }
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
   @media (min-width: 112.5em) {
     html {
-      font-size: 80%; } }
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -158,7 +155,7 @@ body {
     /*link is a pseudo class - to style elements in a special state. */
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 100px;
     /*this rounds the corners of the button */

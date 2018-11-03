@@ -5,7 +5,7 @@
     &:visited { /*link is a pseudo class - to style elements in a special state. */
       text-transform: uppercase;
       text-decoration: none;
-      padding: 15px 40px;
+      padding: 1.5rem 4rem; //same as 15px 40px
       display: inline-block;
       border-radius: 100px; /*this rounds the corners of the button */
       transition: all .2s;
