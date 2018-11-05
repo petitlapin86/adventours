@@ -26,7 +26,7 @@
       transform: skewY(7deg); //this is offsetting the angle shape and straightetning the features
 
       @include respond(tab-portrait) {
-        padding: 15rem 0; //making padding smaller on smaller screens
+        padding: 10rem 0; //making padding smaller on smaller screens
       }
 
     }
