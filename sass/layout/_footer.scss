@@ -13,6 +13,12 @@
     &__logo-box {
       text-align: center;
       margin-bottom: 8rem;
+
+      @include respond(tab-portrait) { //making smaller on smaller screen sizes
+        margin-bottom: 6rem; //decreasing margin bottom on smaller screens 
+      }
+
+
     }
 
     &__logo {

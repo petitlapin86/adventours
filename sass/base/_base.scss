@@ -34,8 +34,4 @@ body {
   @include respond(tab-portrait) { //width < 900?
     padding: 0; //gets rid of white border on smaller screens
   }
-
-
-
-
 }
