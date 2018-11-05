@@ -160,51 +160,41 @@
         font-weight: 100;
     }
 
-
-    // MAJOR REMAPPING FOR CARD IN MOBILE DEVICES
-    @media only screen and (max-width: 56.25em),
-    only screen and (hover: none) {
-        height: auto;
-        border-radius: 3px;  // moved from __side to container element .card
-        background-color: $color-white;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15); // moved from __side
-
-        &__side {
-            height: auto;
-            position: relative;
-            box-shadow: none;
+          // SMALLER SCREEN CARD
+          //is totally different because no need for rotation or 2 sides
+        @include respond(tab-port) {
+          // FUNCTIONALITY
+          height: auto; //fixes issue mentioned in line above
 
 
-            &--back {
-                transform: rotateY(0);
-                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-            }
-        }
+          &__side {
 
-        &:hover &__side--front { // .card:hover .card_side--front
-            transform: rotateY(0);
-        }
+              height: auto;
+              position: relative;
+              border-radius: 3px;
 
-        &__details {
-            padding: 0 1rem;
-        }
+              &--back {
+                  transform: rotateY(0);
+              }
+          }
 
-        //BACK SIDE STYLING
-        &__cta {
-        position: relative;
-        top: 0%;
-        left: 0%;
-        transform: translate(0);
-        width: 100%;
-        padding: 7rem 4rem 4rem 4rem;
-        }
+          &:hover &__side--front { // telling card not to rotate on smaller screens
+              transform: rotateY(0);
+          }
 
-        &__price-box {
-            margin-bottom: 2rem;
-        }
+          //BACK SIDE STYLING
+          &__cta {
+             position: relative;
+             top: 0;
+             left: 0;
+             transform: translate(0); //this is to center element
+             width: 100%;
+          }
 
-        &__price-value {
-            font-size: 4rem;
-        }
-    }
-}
+          &__price-box {
+              margin-bottom: 8rem;
+          }
+
+          &__price-value {
+              font-size: 6rem;
+          }
