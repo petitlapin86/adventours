@@ -165,6 +165,9 @@
         @include respond(tab-port) {
           // FUNCTIONALITY
           height: auto; //fixes issue mentioned in line above
+          border-radius: 3px;  // moved from __side to container element .card
+          background-color: $color-white;
+          box-shadow: 0 1.5rem 4rem rgba($color-black, .15); // moved from __side
 
 
           &__side {
