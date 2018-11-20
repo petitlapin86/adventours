@@ -75,6 +75,12 @@
                 </div>
               <div class="col-1-of-2">
                 <div class="composition">
+
+                  <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                        sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                        alt="composition__photo composition__photo--p1"
+                        src="img/nat-1-large.jpg"> <!--a list of breakpoints we define for choosing which img to display, including src incase srcset is not approved by browser-->
+
                   <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                   <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
                   <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
@@ -348,7 +354,7 @@
             <picture class="footer__logo"> <!-- using picture element to specify multiple picture sizes for one element -->
               <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
               media="(max-width: 37.53em)"> <!-- use a media query to force to use a different source set - aka ART DIRECTION -->
-                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo"> <!-- give browser a choice of image resolution -->
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo" src="img/logo-green-2x.png"> <!-- give browser a choice of image resolution -->
             </picture>
 
 
