@@ -35,3 +35,8 @@ body {
     padding: 0; //gets rid of white border on smaller screens
   }
 }
+
+::selection { // this is changing the look of selected (aka highlighted) text in the browser
+  background-color: $color-primary;
+  color: $color-white;
+}

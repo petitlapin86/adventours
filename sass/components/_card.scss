@@ -162,7 +162,8 @@
 
           // SMALLER SCREEN CARD
           //is totally different because no need for rotation or 2 sides
-        @include respond(tab-port) {
+          @media only screen and (max-width: 56.25em), //telling it to only show this version on smaller screens
+                  only screen and (hover: none) { //and also on touch screen devices (where a rotated card on hover wouldnt work)
           // FUNCTIONALITY
           height: auto; //fixes issue mentioned in line above
           border-radius: 3px;  // moved from __side to container element .card
