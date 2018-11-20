@@ -344,7 +344,14 @@
         <!-- FOOTER -->
         <footer class="footer">
           <div class="footer__logo-box">
-            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo" class="footer__logo">
+
+            <picture class="footer__logo"> <!-- using picture element to specify multiple picture sizes for one element -->
+              <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+              media="(max-width: 37.53em)"> <!-- use a media query to force to use a different source set - aka ART DIRECTION -->
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo"> <!-- give browser a choice of image resolution -->
+            </picture>
+
+
           </div>
           <div class="row">
             <div class="col-1-of-2">
