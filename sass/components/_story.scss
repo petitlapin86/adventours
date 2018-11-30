@@ -26,14 +26,18 @@
       width: 15rem;
       height: 15rem;
       float: left;
-      -webkit-shape-outside: circle(50% at 50% 50%); //this is shaping the text to go around circle
-      shape-outside: circle(50% at 50% 50%);
-      -webkit-clip-path: circle(50% at 50% 50%); //this is shaping the image to be a centered circle
-      clip-path: circle(50% at 50% 50%);
-      transform: translateX(-3rem) skewX(-12deg);
+      transform: translateX(-3rem) skewX(12deg);
       position: relative;
       overflow: hidden; // this is in case clip path is not supported (Firefox) and images spill out of __shape
+      border-radius: 50%;
 
+      @supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(00)) {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%); //this is shaping the text to go around circle
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none;
+      }
 
       @include respond(phone) {
              transform: translateX(-3rem) skewX(0);
