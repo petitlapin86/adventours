@@ -31,7 +31,7 @@
 
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 85% 75vh, 0 100%); //fixing angle for smallest screen
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); //fixing angle for smallest screen
   }
 }
 
