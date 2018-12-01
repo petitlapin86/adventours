@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
   "watch:sass": "node-sass sass/main.scss css/style.css -w",
-  "compile:sass": "node-sass sass/main.scss css/style.comp.css"
+  "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+  "concat:css": "concat -o output.css ./1.css ./2.css ./3.css"
   },
   "repository": {
     "type": "git",
